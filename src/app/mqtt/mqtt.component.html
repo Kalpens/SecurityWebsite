@@ -1,0 +1,17 @@
+<head>
+  <title>test ws mqtt.js</title>
+</head>
+
+<h1>
+  Welcome to {{ title }}!
+</h1>
+<h2>Yay: </h2>
+<ul>
+  <li *ngFor="let cust of custList">{{cust.address}} and name: {{cust.firstName}}</li>
+</ul>
+<textarea id="textofbase64"></textarea>
+<button (click)="changeTitle()">Click Me</button>
+<button (click)="runMe()">Start listening to mqtt</button>
+<button (click)="stopMQTT()">Stop mqtt</button>
+<img id="picture" src="http://blog.nkdroidsolutions.com/wp-content/uploads/2015/09/collapsing_toolbar_with_tabs-1-150x150.png">
+
