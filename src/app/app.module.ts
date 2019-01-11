@@ -38,7 +38,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions =  {
     ReactiveFormsModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,27 +1,31 @@
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <div class="wrapper">
     <div class="container">
 
       <div class="buttonRow row">
           <div class="col">
-            <input type="text" class="datepicker button">
+            <input type="text" class="datepicker button" #date1>     
           </div>
           <div class="col">
-            <input type="text" class="datepicker button">
+            <input type="text" class="datepicker button" #date2>
           </div>
           <div class="col">
-            <button class="button">Search</button>
+            <button type="submit" class="button" (click)='onSubmit(date1.value, date2.value)'>Search</button>
           </div>
           <div class="col">
-            <button class="button">Takea Pic</button>
+            <button class="button">Take a Pic</button>
           </div>
       </div>
 
       <div class="display">
-        <ul>
-          <li *ngFor="let picture of pictures">
-            {{ picture.userID }}
+        <ul *ngIf="pictures">
+          <li class="row" *ngFor="let picture of pictures">
+            <img class="col" src="https://housesecurity.azurewebsites.net/api/picture/get?picturename={{picture.pictureName}}" height="240" width="320">
+            <p class="col">asd</p>
           </li>
         </ul>
+        <h4 *ngIf="!pictures" class="center">Loading...</h4>
       </div>
     </div>
 </div>
