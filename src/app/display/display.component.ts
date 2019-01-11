@@ -16,7 +16,7 @@ import { Picture } from '../shared/models/PictureObj';
 
   export class DisplayComponent implements OnInit 
   {
-    displayImages: Picture[];
+    pictures: Picture[];
     constructor(private dataService: PictureService,
       private router: Router) {
     }
@@ -27,9 +27,8 @@ import { Picture } from '../shared/models/PictureObj';
 
     getImages() {
       this.dataService.getAll(moment(moment()).format("YYYY-MM-DD, h:mm:ss a")).subscribe(lst => {
-        this.displayImages = lst
+        this.pictures = lst;
       });
-      console.log(this.displayImages[0].userId);
-      
+     
     }
   }

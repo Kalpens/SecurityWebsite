@@ -17,10 +17,11 @@ export class PictureService {
     this.actionUrl = this.config.serverWithApiUrl + '/service';
   }
 
-  public getAll(date1: string, date2?: string): Observable<Picture[]> {
+  public getAll(date1: string, date2?: string): Observable<Picture[]> 
+  {
     //redo
     if (date2 == null){
-      return this.http.get<Picture[]>(this.actionUrl + "?stringDate=" + date1)
+      return this.http.get<Picture[]>(this.actionUrl + "?stringDate=" + date1);
     }
     return this.http.post<Picture[]>(this.actionUrl + "?stringDate1=" + date1 + "&stringDate2=" + date2, null);
     
