@@ -6,7 +6,7 @@ import {User} from '../models/UserObj';
 
 
 @Injectable()
-export class DataService {
+export class AuthenticateService {
 
   private readonly actionUrl: string;
 

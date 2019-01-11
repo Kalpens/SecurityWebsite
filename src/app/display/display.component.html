@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div class="container">
+
+      <div class="buttonRow row">
+          <div class="col">
+            <input type="text" class="datepicker button">
+          </div>
+          <div class="col">
+            <input type="text" class="datepicker button">
+          </div>
+          <div class="col">
+            <button class="button">Search</button>
+          </div>
+          <div class="col">
+            <button class="button">Takea Pic</button>
+          </div>
+      </div>
+
+      <div class="display">
+        <ul>
+          <li *ngFor="let d of displayImages">
+            <p>{{ d }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>

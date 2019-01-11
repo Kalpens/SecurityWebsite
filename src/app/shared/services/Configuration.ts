@@ -1,5 +1,5 @@
 export class Configuration {
-  public server = 'https://localhost:44394/';
+  public server = 'https://housesecurity.azurewebsites.net/';
   public apiUrl = 'api/';
   public serverWithApiUrl = this.server + this.apiUrl;
 }

@@ -1,0 +1,19 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.buttonRow{
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    padding-top: 50px;
+}
+.button{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.datepicker{
+    width: 90px;
+}
+.display{
+    height: 100%;
+    overflow: scroll;
+}

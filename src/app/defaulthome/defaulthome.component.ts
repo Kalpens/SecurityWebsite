@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../shared/services/SecurityApiService';
+import { AuthenticateService } from '../shared/services/AuthenticateService';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 import {User} from '../shared/models/UserObj';
@@ -8,7 +8,7 @@ import {User} from '../shared/models/UserObj';
   selector: 'app-defaulthome',
   templateUrl: './defaulthome.component.html',
   styleUrls: ['./defaulthome.component.css'],
-  providers: [DataService]
+  providers: [AuthenticateService]
 })
 
 export class DefaulthomeComponent implements OnInit {
@@ -21,7 +21,7 @@ export class DefaulthomeComponent implements OnInit {
     Password: new FormControl('')
   })
 
-  constructor(private dataService: DataService,
+  constructor(private dataService: AuthenticateService,
               private router: Router) {
   }
 

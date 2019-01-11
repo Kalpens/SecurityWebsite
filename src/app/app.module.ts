@@ -9,6 +9,10 @@ import { DefaulthomeComponent } from './defaulthome/defaulthome.component';
 import {IMqttServiceOptions, MqttModule} from 'ngx-mqtt';
 import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
+import { DisplayComponent } from './display/display.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions =  {
   hostname: 'm20.cloudmqtt.com',
@@ -23,14 +27,18 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions =  {
     AppComponent,
     MqttComponent,
     NavbarComponent,
-    DefaulthomeComponent
+    DefaulthomeComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
