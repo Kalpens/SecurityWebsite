@@ -16,5 +16,5 @@
 }
 .display{
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
 }

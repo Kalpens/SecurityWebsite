@@ -26,8 +26,8 @@ export class PictureService {
     return this.http.post<Picture[]>(this.actionUrl + "?stringDate1=" + date1 + "&stringDate2=" + date2, null);
     
   }
-  public getPictureByName(name: string): Observable<Picture>{
-      return this.http.get<Picture>("")
+  public getPictureUrlByName(name: string): string{
+      return this.config.serverWithApiUrl + '/picture/get?picturename=' + name;
   }
 
 }
