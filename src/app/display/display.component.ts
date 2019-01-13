@@ -31,6 +31,7 @@ import { MqttService, IMqttMessage } from 'ngx-mqtt';
     constructor(private dataService: PictureService,
       private router: Router, private ref: ChangeDetectorRef, private mqtt: MqttService) {
         this.htmlToAdd = "";
+        this.pictures = [];
         this.subscription = this.mqtt.observe('my/mqtt').subscribe((message: IMqttMessage) => {
           if(message != null){
             this.notification = true;

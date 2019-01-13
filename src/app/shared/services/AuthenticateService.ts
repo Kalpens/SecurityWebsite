@@ -22,10 +22,10 @@ export class AuthenticateService {
 
 
 
-  public authentication(user: User): Observable<string> {
-    const toAdd = { Username: user.Username, Password: user.Password };
+  public authentication(user: User): Observable<User> {
+    const toAdd = { Username: user.username, Password: user.password };
 
-    return this.http.post<string>(this.actionUrl, toAdd);
+    return this.http.post<User>(this.actionUrl, toAdd);
   }
 
 }

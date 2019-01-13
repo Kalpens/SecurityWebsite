@@ -17,8 +17,8 @@ export class DefaulthomeComponent implements OnInit {
   private returnedUser: User;
 
   userForm = new FormGroup({
-    Username: new FormControl(''),
-    Password: new FormControl('')
+    username: new FormControl(''),
+    password: new FormControl('')
   })
 
   constructor(private dataService: AuthenticateService,
@@ -30,7 +30,11 @@ export class DefaulthomeComponent implements OnInit {
     //  .subscribe((data: string[]) => this.values = data);
     // console.log(this.values);
     const user = this.userForm.value;
-    this.dataService.authentication(user).subscribe((data: string) => {console.log(data)});
+    this.dataService.authentication(user).subscribe((data: User) => {
+        console.log(data.token);
+        if (data.token != null) {
+        this.router.navigate(['display']); }
+        });
     // this.userForm.reset();
     // this.router.navigateByUrl('/mqtt');
   }
