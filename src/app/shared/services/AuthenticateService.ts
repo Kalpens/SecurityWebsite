@@ -13,7 +13,7 @@ export class AuthenticateService {
   private config: Configuration = new Configuration();
 
   constructor(private http: HttpClient) {
-    this.actionUrl = this.config.serverWithApiUrl + 'user/authenticate';
+    this.actionUrl = this.config.serverWithApiUrl + '/authenticate';
   }
 
   public getAll(): Observable<string[]> {
