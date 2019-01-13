@@ -30,7 +30,7 @@ export class DefaulthomeComponent implements OnInit {
     //  .subscribe((data: string[]) => this.values = data);
     // console.log(this.values);
     const user = this.userForm.value;
-    this.dataService.authentication(user).subscribe((data: User) => {if (data.Token != null) { console.log(data); }});
+    this.dataService.authentication(user).subscribe((data: string) => {console.log(data)});
     // this.userForm.reset();
     // this.router.navigateByUrl('/mqtt');
   }
